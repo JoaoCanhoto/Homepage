@@ -34196,7 +34196,8 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-header .u-nav-2 {
   box-shadow: 2px 2px 8px 0 rgba(128,128,128,1);
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 0.875rem;
 }
 
 .u-header .u-nav-3 {
@@ -34205,7 +34206,8 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-header .u-nav-4 {
   box-shadow: 2px 2px 8px 0 rgba(128,128,128,1);
-  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
 }
 
 @media (max-width: 991px) {
