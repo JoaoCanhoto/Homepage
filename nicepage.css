@@ -363,11 +363,11 @@ span.fr-img-caption.fr-view {
 /*end-commonstyles library*//*begin-commonstyles library*/@charset "UTF-8";
 
 /*!
- * animate.css -http://daneden.me/animate
- * Version - 3.7.0
+ * animate.css -https://daneden.github.io/animate.css/
+ * Version - 3.7.2
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
- * Copyright (c) 2018 Daniel Eden
+ * Copyright (c) 2019 Daniel Eden
  */
 
 @-webkit-keyframes bounce {
@@ -3975,12 +3975,14 @@ span.fr-img-caption.fr-view {
   animation-duration: 3s;
 }
 
-@media (prefers-reduced-motion) {
+@media (print), (prefers-reduced-motion: reduce) {
   .animated {
-    -webkit-animation: unset !important;
-    animation: unset !important;
-    -webkit-transition: none !important;
-    transition: none !important;
+    -webkit-animation-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    -webkit-transition-duration: 1ms !important;
+    transition-duration: 1ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
   }
 }
 /*end-commonstyles library*//*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
@@ -34206,7 +34208,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-header .u-nav-4 {
   box-shadow: 2px 2px 8px 0 rgba(128,128,128,1);
-  text-transform: uppercase;
+  font-weight: 400;
   font-size: 0.875rem;
 }
 
@@ -34216,7 +34218,21 @@ a.u-link.u-text-hover-grey-90:hover {
     height: 48px;
   }
 }
+@media (max-width: 767px) {
+  .u-header .u-sheet-1 {
+    min-height: 108px;
+  }
 
+  .u-header .u-image-1 {
+    width: auto;
+    margin-top: 29px;
+  }
+
+  .u-header .u-menu-1 {
+    margin-top: -41px;
+    margin-bottom: 34px;
+  }
+}
 
 .u-footer .u-sheet-1 {
   min-height: 120px;
@@ -34267,6 +34283,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-footer .u-text-1 {
   width: 631px;
+  font-size: 1.125rem;
   margin: -24px auto 8px;
 }
 @media (max-width: 1199px) {
@@ -34276,8 +34293,6 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-footer .u-image-1 {
     margin-top: 14px;
-    width: 80px;
-    height: 62px;
   }
 
   .u-footer .u-social-icons-1 {
@@ -34286,30 +34301,51 @@ a.u-link.u-text-hover-grey-90:hover {
     margin-top: -31px;
     margin-right: 0;
   }
+
+  .u-footer .u-text-1 {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 991px) {
+  .u-footer .u-image-1 {
+    width: auto;
+    margin-top: 22px;
+  }
+
   .u-footer .u-social-icons-1 {
-    width: 122px;
-    min-width: 94px;
+    height: 25px;
+    width: 165px;
+    margin-top: -39px;
+    margin-right: 0;
+  }
+
+  .u-footer .u-text-1 {
+    width: 412px;
+    margin-top: -22px;
+    margin-bottom: 38px;
   }
 }
 @media (max-width: 767px) {
   .u-footer .u-sheet-1 {
-    min-height: 200px;
+    min-height: 208px;
   }
 
   .u-footer .u-image-1 {
+    height: 62px;
     margin-left: 230px;
   }
 
   .u-footer .u-social-icons-1 {
+    height: 33px;
+    width: 205px;
     margin-top: 20px;
     margin-right: auto;
   }
 
   .u-footer .u-text-1 {
-    width: 540px;
-    margin: 20px 0 0;
+    width: 412px;
+    margin-top: 15px;
+    margin-bottom: 38px;
   }
 }
 @media (max-width: 575px) {
@@ -34320,7 +34356,6 @@ a.u-link.u-text-hover-grey-90:hover {
   .u-footer .u-social-icons-1 {
     height: 22px;
     width: 150px;
-    min-width: 120px;
   }
 
   .u-footer .u-text-1 {
