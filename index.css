@@ -1446,8 +1446,8 @@
   white-space: nowrap;
   height: 32px;
   min-height: 16px;
-  width: 292px;
-  min-width: 196px;
+  width: 344px;
+  min-width: 232px;
   animation-duration: 1000ms;
   margin: 21px auto 0 0;
 }
@@ -1473,6 +1473,10 @@
 }
 
 .u-section-6 .u-icon-6 {
+  height: 100%;
+}
+
+.u-section-6 .u-icon-7 {
   height: 100%;
   color: rgb(64, 64, 64) !important;
 }
@@ -1539,6 +1543,10 @@
 
   .u-section-6 .u-icon-5 {
     color: rgb(0, 122, 185) !important;
+  }
+
+  .u-section-6 .u-icon-6 {
+    color: rgb(64, 64, 64) !important;
   }
 
   .u-section-6 .u-layout-cell-3 {
